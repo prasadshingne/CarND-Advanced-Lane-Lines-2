@@ -135,3 +135,4 @@ Following improvements can be made to improve the pipeline for challenge videos 
 2. Outlier rejection and a low-pass filters may be added for smooth predictions.
 3. Other image thresholds could perhaps be used to improve detection.
 4. If the lane detection is wrong for a particular frame it can be rejected and the previous prediction may be used.
+5. Spline or higher order polynomial may be used fit a lane line through the binary image.
