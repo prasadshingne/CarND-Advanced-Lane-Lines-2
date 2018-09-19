@@ -66,7 +66,7 @@ Following figure shows a test image in HLS with the three channels displayed sep
 ![alt text][image3]
 Following this I computed Sobel X (Cell 8), Sobel Y (Cell 9), Magnitude (Cell 10), Color (Cell 11) and Direction threshold (Cell 12) images. I also calculated combined image of  Sobel X + Sobel Y + Magnitude + Direcion (Cell 13). After some tweaking of the thresholds the following picture shows each of the thresholds for all the test images (Cell 14). You can see the lane lines in the combined image but it is still noisy and not very clear.
 ![alt text][image4]
-I observed that just Sobel X + Sobel Y performs well along with the Color threshold as see in Cell 10 of [advanced_lane_detection.ipynb](https://github.com/prasadshingne/CarND-Advanced-Lane-Lines/blob/master/advanced_lane_detection.ipynb) shown below. However the color transform is still better. Hence, I have used just the color threshold in the rest of the project. 
+I observed that just Sobel X + Sobel Y performs well along with the Color threshold as see in Cell 10 of [advanced_lane_detection.ipynb](https://github.com/prasadshingne/CarND-Advanced-Lane-Lines/blob/master/advanced_lane_detection.ipynb) shown below. However the color threshold is still better. Hence, I have used just the color threshold in the rest of the project. 
 ![alt text][image5]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
