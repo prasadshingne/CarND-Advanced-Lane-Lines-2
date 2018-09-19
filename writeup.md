@@ -17,15 +17,12 @@ The goals of this project are the following:
 [image2]: ./output_images/Display_Images/test_img_calib_example.jpg "Camera Calib Test"
 [image3]: ./output_images/Display_Images/HLS_exampls.jpg "HLS Example"
 [image4]: ./output_images/Display_Images/combined_threshold.jpg "Combined Thresholds"
-[image5]: ./output_images/Display_Images/compare_combined_thresholds.jpg "Compare combined thersholds"
+[image5]: ./output_images/Display_Images/compare_combined_thresholds1.jpg "Compare combined thersholds"
 [image6]: ./output_images/Display_Images/persp_transform_example.jpg "Perspective Transform Example"
 [image7]: ./output_images/Display_Images/persp_transform_sidebyside.jpg "Perspective Transform Result"
 [image8]: ./output_images/Display_Images/lane_lines_identified.jpg "Lane Lines Identified"
 [image9]: ./output_images/Display_Images/result_images.jpg "Result Images"
-[image10]: ./output_images/Display_Images/problem_frame.jpg "Result Images"
 [video1]: ./output_videos/project_video.mp4 "Output Project Video"
-[video2]: ./output_videos/challenge_video.mp4 "Output Challenge Video"
-[video3]: ./output_videos/harder_challenge_video.mp4 "Video"
 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points and responses
@@ -127,8 +124,7 @@ The video_pipeline() simply calls the pic_pipeline() for every frame in the vide
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-I had to spend by far the longest time coming up with the right color transform. When I started off I was using a combined binary of the following SobelX + SobelY + Direction + Magnitude. Then I switched to a SobelX+SobelY combined image and I was using thresh_min=20, thresh_max=160 for SobelX and SobelY. This was not detecting the right hand lane line is fram 616 to of the image. After playing around with it further I lowered the thresh_min to 8 which produced acceptable result for the frame. However, now the frames 1039 and 1040 were incorrectly detecting the right lane in the middle of the lane. This we because the binary image for those misdetected tree shadows as lane. Based on suggestion from previous reviewer I implemented a color threshold to specifically identify yellow and white colors for the lanes using color masks as shown in Cell 11 of [color_grad_threshold.ipynb](https://view5639f7e7.udacity-student-workspaces.com/notebooks/CarND-Advanced-Lane-Lines/color_grad_threshold.ipynb). To the best of my knowledge this as fixed the issues and the project video result is acceptable.
-![alt text][image10]
+I had to spend by far the longest time coming up with the right color transform. When I started off I was using a combined binary of the following SobelX + SobelY + Direction + Magnitude. Then I switched to a SobelX+SobelY combined image and I was using thresh_min=20, thresh_max=160 for SobelX and SobelY. This was not detecting the right hand lane line is fram 616 to of the image. After playing around with it further I lowered the thresh_min to 8 which produced acceptable result for the frame. However, now the frames 1039 and 1040 were incorrectly detecting the right lane in the middle of the lane. This we because the binary image for those misdetected tree shadows as lane. Based on suggestion from previous reviewer I implemented a color threshold to specifically identify yellow and white colors for the lanes using color masks as shown in Cell 11 of [color_grad_threshold.ipynb](https://view5639f7e7.udacity-student-workspaces.com/notebooks/CarND-Advanced-Lane-Lines/color_grad_threshold.ipynb). To the best of my knowledge this has fixed the issues and the project video result.
 
 I did not spend time to improve results for challenge videos in the interest of time and my pipeline did not perform well on them. 
 
