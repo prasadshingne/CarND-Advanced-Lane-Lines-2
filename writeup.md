@@ -71,7 +71,7 @@ I observed that just Sobel X + Sobel Y performs well along with the Color thresh
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-My code for perspective transform is present in [perspective_tranform.ipynb](https://github.com/prasadshingne/CarND-Advanced-Lane-Lines/blob/master/perspective_tranform.ipynb). I used test image with straignt lines - straignt_lines2.jpg for the transform. Four points are selected as shown on the image for the transform. The destination points were selected to get a clear picture of the street
+My code for perspective transform is present in [perspective_tranform.ipynb](https://github.com/prasadshingne/CarND-Advanced-Lane-Lines/blob/master/perspective_tranform.ipynb). I used test image with straignt lines - straignt_lines2.jpg for the transform. Four points are selected as shown on the image for the transform. The destination points were selected to get a clear picture of the street.
 ![alt text][image6]
 This resulted in the following source and destination points (Cell 5 of [perspective_tranform.ipynb](https://github.com/prasadshingne/CarND-Advanced-Lane-Lines/blob/master/perspective_tranform.ipynb)):
 
