@@ -547,4 +547,4 @@ def video_pipeline(input_video, output_video):
     clip2.write_videofile(output_video, audio=False)
     
 # Video Output
-video_pipeline('Rec_20201229_162513_test.mp4','my_output_videos/Rec_20201229_162513_test_out.mp4')
+video_pipeline('my_test_video.mp4','my_output_videos/my_test_video_output.mp4')
